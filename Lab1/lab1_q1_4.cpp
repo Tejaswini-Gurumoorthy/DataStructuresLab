@@ -4,14 +4,14 @@ using namespace std;
 int main()
 {
     string main_str,sub_str;
-    int pos,p;
+    int pos;
     cout<<"Enter the main string : "<<endl;
     cin>>main_str;
     cout<<"Enter the string to be inserted : "<<endl;
     cin>>sub_str;
     cout<<"Enter the position from which the substring must be inserted :  "<<endl;
-    cin>>p;
-    pos= p-1;
+    cin>>pos;
+    pos--;
 
     int len_main=0,len_sub=0;
     while(main_str[len_main]!='\0')
@@ -23,7 +23,7 @@ int main()
         len_sub++;
     }
 
-    char final_str[len_main+len_sub+1];
+    char final_str[100];
     int i=0;
     while(i<pos)
     {
@@ -37,7 +37,7 @@ int main()
         i++;
         j++;
     }
-    int k= pos+len_sub+1;
+    int k= pos;
     while(k<len_main)
     {
         final_str[i]= main_str[k];
