@@ -37,14 +37,6 @@ public:
     {
         return top;
     }
-    void display()
-    {
-        for(int i=0;i<=top;i++)
-        {
-            cout<<a[i]<<" ";
-        }
-        cout<<endl;
-    }
 
 };
 
