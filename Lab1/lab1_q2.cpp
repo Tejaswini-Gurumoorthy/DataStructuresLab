@@ -8,10 +8,13 @@ class Student
     char grade;
 
 public:
-    void read(Student s[], int size)
+    void read(Student *s, int size)
     {
         for (int i = 0; i < size; i++)
         {
+            cout<<endl;
+            cout << "DETAILS OF STUDENT " << i + 1 << ": "<<endl;
+            cout << endl;
             cout << "Enter Student name : ";
             cin >> s[i].name;
             cout << "Enter student roll number : ";
@@ -21,9 +24,9 @@ public:
         }
     }
 
-    void display(Student s[], int size)
+    void display(Student *s, int size)
     {
-        s->sort(s, size);
+        s[0].sort(s, size);
         for (int i = 0; i < size; i++)
         {
             cout << "DETAILS OF STUDENT " << i + 1 << ": "<<endl;
@@ -35,7 +38,7 @@ public:
             cout << endl;
         }
     }
-    void sort(Student s[], int size)
+    void sort(Student *s, int size)
     {
         int min, pos;
         Student temp;
@@ -64,6 +67,6 @@ int main()
     cout << "Enter number of students : ";
     cin >> size;
     Student s[size];
-    s->read(s, size);
-    s->display(s, size);
+    s[0].read(s, size);
+    s[0].display(s, size);
 }
