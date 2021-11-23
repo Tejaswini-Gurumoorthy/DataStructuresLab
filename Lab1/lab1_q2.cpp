@@ -50,7 +50,7 @@ public:
                 if (s[j].roll_no < min)
                 {
                     min = s[j].roll_no;
-                    cout << j << endl;
+                    pos=j;
                 }
             }
             temp = s[pos];
