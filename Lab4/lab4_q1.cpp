@@ -135,7 +135,9 @@ void inf_to_post(string s)
 
 int main()
 {
-    string exp = "a+b*(c^d-e)^(f+g*h)-i";
+    string exp;
+    cout<<"Enter the expression : "<<endl;
+    cin>>exp;
     inf_to_post(exp);
     return 0;
 }
